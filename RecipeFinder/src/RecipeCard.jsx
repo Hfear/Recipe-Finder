@@ -1,5 +1,8 @@
 // our component of recipe card that will hold the image and tile,, and link a single recipe 
 
+import CurRecipe from "./CurRecipe";
+
+
 
 export default function RecipeCard({recipe})
 {
@@ -13,7 +16,7 @@ export default function RecipeCard({recipe})
     } = recipe; 
 
     function handleClick(){
-        console.log('clicked');
+        setState()
     }
 
     return (

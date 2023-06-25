@@ -87,6 +87,33 @@ margin-top: 20px;
   border-width: 2px;
 }
 
+.cur-recipe{
+  border: 1px solid ;
+  border-radius: 8px;
+  border-color: #fffbfe;
+  border-width: 1px;
+  padding: 2px;
+  margin: 2% 10%;
+  justify-content: center;
+  text-align: center;
+}
+.cur-items{
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  margin: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.cur-img{
+  border: 1px solid white;
+  margin: auto;
+  max-width: 400px;
+  max-height: 400px;
+  min-height: 100px;
+}
+
 
 
 

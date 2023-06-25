@@ -6,6 +6,7 @@ import RecipeView from './RecipeView'
 import RecipeCard from './RecipeCard'
 import recipes from './recipes'
 import Navbar from './navbar'
+import CurRecipe from './CurRecipe'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,8 @@ function App() {
 <div >
     <h1 className='topbar-title'>Recipe Finder</h1>
 </div>
+
+<CurRecipe recipe={recipes[0]}/>
 
 {/* {recipeCards} */}
 
