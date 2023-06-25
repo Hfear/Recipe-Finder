@@ -5,25 +5,26 @@ import './App.css'
 import RecipeView from './RecipeView'
 import RecipeCard from './RecipeCard'
 import recipes from './recipes'
+import Navbar from './navbar'
 
 function App() {
   const [count, setCount] = useState(0)
+
+
 
   return (
   
 <>
 
+<Navbar/>
 
-
-<h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-
-<div className='topbar'>
+<div >
     <h1 className='topbar-title'>Recipe Finder</h1>
 </div>
+
+{/* {recipeCards} */}
+
     <RecipeView/>
-    
   
 </>
 

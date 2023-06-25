@@ -9,11 +9,18 @@ export default function RecipeCard({recipe})
         image : {src, alt},
         name,
         category,
+        ingredients,
     } = recipe; 
+
+    function handleClick(){
+        console.log('clicked');
+    }
 
     return (
 
-        <div className = "r-card">
+        <div className = "r-card" onClick = {handleClick}>
+           
+
             <img className = "r-img" src = {src} alt = {alt} />
             <h4 className="r-name">{name}</h4>
             <h5 className = "r-category">{category}</h5>

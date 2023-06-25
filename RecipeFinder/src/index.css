@@ -75,7 +75,7 @@ margin-top: 20px;
 
 }
 .topbar-title{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   background-color: #4f2537;
   color: #ffffff;
@@ -112,6 +112,7 @@ margin-top: 20px;
 
 .r-card{
   justify-content: center;
+
   margin : 3px;
   height: 220px;
   width: 220px;
@@ -136,6 +137,7 @@ margin-top: 20px;
 
 .r-img{
   height: 150px;
+  margin: auto;
   border-radius: 1px;
   border: 1px solid white;
 }

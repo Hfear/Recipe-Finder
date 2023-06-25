@@ -3,24 +3,18 @@ import recipes from "./recipes"
 
 export default function RecipeView()
 {
-
+    const recipeCards = recipes.map((recipe,i) =>{
+        return <RecipeCard recipe={recipe} key = {i} />
+      });
+    
     return (
 
         <>
 
     <div className="View-container">
 
-        
-        <RecipeCard recipe = {recipes[0]}/> 
-        <RecipeCard recipe = {recipes[1]}/> 
-        <RecipeCard recipe = {recipes[2]}/> 
-        
-        <RecipeCard recipe = {recipes[0]}/> 
-        <RecipeCard recipe = {recipes[1]}/> 
-        <RecipeCard recipe = {recipes[2]}/> 
-        
-
-
+        {recipeCards}
+        {recipeCards}
 
     </div>
 
