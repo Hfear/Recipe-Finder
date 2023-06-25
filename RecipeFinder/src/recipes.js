@@ -10,6 +10,7 @@ const recipes = [
         },
         name : "chocolate cake",
         category: "cake",
+        ingredients: "all-purpose flour,sugar, unsweetened cocoa powder, baking powder, baking soda, salt, espresso powder,  milk, oil, eggs, vanilla extract, boiling water",
 
     },
 

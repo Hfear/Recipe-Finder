@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -103,15 +107,14 @@ margin-top: 20px;
   /* flex-wrap: wrap;
   align-items: center; */
  
-  position: relative;
 }
 
 
 .r-card{
   justify-content: center;
   margin : 3px;
-  height: 200px;
-  width: 200px;
+  height: 220px;
+  width: 220px;
   border-radius: 1px;
   border: 1px solid white;
   padding: 0.6em 1.2em;
@@ -133,6 +136,8 @@ margin-top: 20px;
 
 .r-img{
   height: 150px;
+  border-radius: 1px;
+  border: 1px solid white;
 }
 
 .r-name{
