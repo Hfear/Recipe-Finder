@@ -52,8 +52,8 @@ function App() {
 </div>
 
 <CurRecipe recipe={recipes[0]}/>
+<div className='button-filters'> {buttons} </div>
 
-{buttons}
 
 
   <div className="View-container">
