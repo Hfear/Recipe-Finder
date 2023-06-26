@@ -9,8 +9,7 @@ export default function RecipeView()
     
     return (
 
-        <>
-
+    <>
     <div className="View-container">
 
         {recipeCards}

@@ -8,13 +8,41 @@ import recipes from './recipes'
 import Navbar from './navbar'
 import CurRecipe from './CurRecipe'
 
+ const categorys = {
+    1 : "cookie",
+    2 : "cake",
+    3 : "cupcake",
+    4 : "pastry",
+  };
+
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [CurCategory, setCategory] = useState(0)
 
 
+  //catagory selectors that filter list based on selected button 
+  const buttons = Object.keys(categorys).map(category => {
+    return (
+      <button
+      key={category}
+      onClick= {() => setCategory(parseInt(category))}
+      >
+        {categorys[category]}
+      </button>
+    );
+  });
 
-  return (
+   //filtering the list based off of what was clicked
+   const filteredRecipes = recipes.filter(recipe => recipe.category === categorys[CurCategory] )
   
+   //the filtered list of recipe previews
+   const FrecipeCards = filteredRecipes.map((recipe,i) =>{
+     return <RecipeCard recipe={recipe} key = {i} />
+   });
+  
+
+
+ return ( 
 <>
 
 <Navbar/>
@@ -25,14 +53,18 @@ function App() {
 
 <CurRecipe recipe={recipes[0]}/>
 
-{/* {recipeCards} */}
+{buttons}
 
-    <RecipeView/>
-  
-</>
 
-   
+  <div className="View-container">
+
+    {FrecipeCards}
+
+  </div>
+
+    {/* <RecipeView/> */}
   
+</> 
   )
 }
 

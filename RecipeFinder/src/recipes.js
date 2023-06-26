@@ -21,7 +21,9 @@ const recipes = [
             alt: "brownies",
         },
         name : "chocolate brownies",
-        category: "brownie",
+        category: "pastry",
+        ingredients: "all-purpose flour,sugar, unsweetened cocoa powder, baking powder, baking soda, salt, espresso powder,  milk, oil, eggs, vanilla extract, boiling water",
+        description: "A one bowl chocolate cake recipe that is quick, easy, and delicious!",
 
     },
 
@@ -31,7 +33,9 @@ const recipes = [
             alt: "vanilla shortbread",
         },
         name : "vanilla shortbread",
-        category: "cookies",
+        category: "cookie",
+        ingredients: "all-purpose flour,sugar, unsweetened cocoa powder, baking powder, baking soda, salt, espresso powder,  milk, oil, eggs, vanilla extract, boiling water",
+        description: "A one bowl chocolate cake recipe that is quick, easy, and delicious!",
 
     },
 
