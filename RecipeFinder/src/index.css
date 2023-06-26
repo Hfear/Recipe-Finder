@@ -88,13 +88,14 @@ margin-top: 20px;
 }
 
 .cur-recipe{
+  background-color: #341e2d;
   border: 1px solid ;
   border-radius: 8px;
   border-color: #fffbfe;
   border-width: 1px;
   padding: 2px;
   margin: 2% 10%;
-  justify-content: center;
+  /* justify-content: center; */
   text-align: center;
 }
 .cur-items{
@@ -102,13 +103,15 @@ margin-top: 20px;
   flex-direction: row;
   padding: 2px;
   margin: 10px;
-  justify-content: center;
-  text-align: center;
+  /* justify-content: center; */
+  /* text-align: center; */
 }
 
 .cur-img{
   border: 1px solid white;
-  margin: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  
   max-width: 400px;
   max-height: 400px;
   min-height: 100px;

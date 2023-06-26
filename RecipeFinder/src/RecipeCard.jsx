@@ -13,6 +13,7 @@ export default function RecipeCard({recipe})
         name,
         category,
         ingredients,
+        description,
     } = recipe; 
 
     function handleClick(){
