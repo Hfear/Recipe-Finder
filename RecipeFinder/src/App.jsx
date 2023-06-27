@@ -7,6 +7,7 @@ import RecipeCard from './RecipeCard'
 import recipes from './recipes'
 import Navbar from './navbar'
 import CurRecipe from './CurRecipe'
+import Modal from './Modal'
 
  const categorys = {
     1 : "cookie",
@@ -15,9 +16,12 @@ import CurRecipe from './CurRecipe'
     4 : "pastry",
   };
 
+
 function App() {
 
   const [CurCategory, setCategory] = useState(1)
+
+  const [modalVisiblity, setmodalvisibility] = useState(false);
 
 
   //catagory selectors that filter list based on selected button 
@@ -32,9 +36,6 @@ function App() {
     );
   });
 
-  const searchbar = {
-
-  }
 
    //filtering the list based off of what was clicked
    const filteredRecipes = recipes.filter(recipe => recipe.category === categorys[CurCategory] )
@@ -43,6 +44,14 @@ function App() {
    const FrecipeCards = filteredRecipes.map((recipe,i) =>{
      return <RecipeCard recipe={recipe} key = {i} />
    });
+
+   //Modal Visibility functions
+   const showModal = () => {
+    setmodalvisibility(true);
+   }
+   const hideModal = () => {
+    setmodalvisibility(false);
+   }
   
 
 
@@ -78,6 +87,14 @@ function App() {
 
 <div className='button-filters'> {buttons} </div>
 
+<div>
+  <button
+  className=''
+  onClick={showModal}
+
+  > + Add Recipe
+  </button>
+</div>
 
   <div className="View-container">
 
@@ -85,7 +102,10 @@ function App() {
 
   </div>
 
-    {/* <RecipeView/> */}
+
+  <Modal isVisible={modalVisiblity} hideModal ={hideModal}>
+  </Modal>
+
   
 </> 
   )
