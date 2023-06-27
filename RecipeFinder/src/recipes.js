@@ -44,7 +44,7 @@ const recipes = [
             src :"https://www.allrecipes.com/thmb/DgqGP0FrcfLs_jbpsMF79LNAsQE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8508153-chocolate-thumbprint-cookies-ddmfs-1027-4x3-6afcfa725417480cb16d776d6f3b773c.jpg",
             alt: "thumbprint cookies",
         },
-        name : "Chocolate Thumbprint Cookies",
+        name : "Chocolate Thumbprint ",
         category: "cookie",
         ingredients: "¾ cup unsalted butter, softened, 1 cup powdered sugar, 1 large egg, 1 teaspoon vanilla extract,2 cups all-purpose flour, ¼ cup unsweetened cocoa powder,¾ teaspoon kosher salt , ½ teaspoon ground cinnamon, sanding sugar",
         description: "These chocolate thumbprint cookies have a ganache filling that bumps up the rich chocolate flavor and adds a nice creaminess to the cookie.",        
