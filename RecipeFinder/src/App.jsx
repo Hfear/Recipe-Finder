@@ -25,6 +25,7 @@ function App() {
   const[recipes, setrecipes] = useState(recipesData)
   const [modalVisiblity, setmodalvisibility] = useState(false);
   const [recipeForm, setrecipeForm] = useState({
+    // image: {src : "", alt : ""},
     name:"",
     category: "",
     ingredients: "",
@@ -74,7 +75,7 @@ function App() {
    }
 
    //spreading an array of objects
-   const handleAddRecipeFormSubmit = (e) => {
+   const handleRecipeFormSubmit = (e) => {
     e.preventDefault();
 
     //resetting recipe form to blank slate
@@ -142,7 +143,8 @@ function App() {
 
 
   <Modal isVisible={modalVisiblity} hideModal ={hideModal}>
-  <form>
+  <form
+  onSubmit={handleRecipeFormSubmit}>
 
   <fieldset className="flex flex-col">
             <label htmlFor="title">Recipe Title</label>
@@ -189,7 +191,7 @@ type = "submit">
   </Modal>
 
 
-{/* <RecipeView/> */}
+<RecipeView/>
   
 </> 
   )
