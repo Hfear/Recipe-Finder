@@ -121,15 +121,15 @@ function App() {
   class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search dessert type..." required />
   </div>
   <button type="submit"
-   className ="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-purple-900 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Search</button>
+   className ="ml-2 text-white bg-indigo-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-indigo-900 dark:hover:bg-indigo-700 dark:focus:ring-purple-800">Search</button>
 </form>
 
 
-<div className='button-filters'> {buttons} </div>
+<div className='button-filters m-1'> {buttons} </div>
 
 <div>
   <button
-  className='border-solid border-indigo-200 border-2 px-2 border-opacity-25 font-serif rounded'
+  className='border-solid border-indigo-200 border-2 px-2 border-opacity-25 font-serif rounded m-1'
   onClick={showModal}
 
   > + Add Recipe
@@ -155,7 +155,7 @@ function App() {
               type="text"
               name="name"
               id="name"
-              className="bg-white border-4 focus:outline-none p-2"
+              className="bg-pink-50 border-4 focus:outline-none p-2"
             />
   </fieldset>
   <fieldset className="flex flex-col">
@@ -166,7 +166,7 @@ function App() {
               type="text"
               name="category"
               id="category"
-              className="bg-white border-4 focus:outline-none p-2"
+              className="bg-pink-50 bg-white border-4 focus:outline-none p-2"
             />
   </fieldset>
 
@@ -178,12 +178,12 @@ function App() {
               type="text"
               name="description"
               id="description"
-              className="bg-white border-4 focus:outline-none p-2"
+              className="bg-pink-50 bg-white border-4 focus:outline-none p-2"
             />
   </fieldset>
 
 <input
-className="bg-blue-500 hover:bg-blue-600 text-white transition mt-4 py-2 cursor-pointer "
+className="bg-indigo-400 bg-opacity-95 px-2 rounded hover:bg-indigo-600 text-white transition mt-4 py-2 cursor-pointer "
 type = "submit">
 </input>
 

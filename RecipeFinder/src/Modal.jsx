@@ -10,7 +10,7 @@ export default function  Modal({isVisible, hideModal, children}) {
             <div onClick={(e) => e.stopPropagation() } className="max-w-xl w-144 mx-auto flex flex-col">
                 <button
                 onClick = {hideModal}
-                className="bg-pink text-purple-100 rounded border-solid border-indigo-200 border-opacity-50"
+                className="border-solid border-indigo-200 border-2 px-2 border-opacity-40 font-serif rounded m-1 bg-indigo-300 bg-opacity-40"
                 >Close tab</button>
                 <div 
                 className="bg-indigo-200 text-gray-800 p-8  border-solid rounded-md border-indigo-900 border-opacity-50">
