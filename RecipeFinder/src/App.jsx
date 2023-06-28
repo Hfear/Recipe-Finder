@@ -36,7 +36,7 @@ function App() {
 
   useEffect(() => {
     async function fetchRecipes(){
-      console.log("fetching recipes");
+      // console.log("fetching recipes");
       const response = await fetch("http://localhost:3000/recipes");
       const recipes = await response.json();
       setrecipes(recipes);
@@ -88,7 +88,8 @@ function App() {
    }
 
    //spreading an array of objects
-   const handleRecipeFormSubmit = (e) => {
+   const handleRecipeFormSubmit = async (e) => 
+   {
     e.preventDefault();
 
     //resetting recipe form to blank slate
@@ -99,11 +100,32 @@ function App() {
       description: "",
     })
 
+    // setrecipes([
+    //   ...recipes,
+    //   recipeForm
+    // ])
+
+  
+
+    const response = await fetch("http://localhost:3000/recipes", {
+      method: "POST",
+      Headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(recipeForm),
+
+    });
+    
+    console.log('response', response);
+    const savedForm = await response.json();
+    console.log('saved form', savedForm);
+
     setrecipes([
       ...recipes,
-      recipeForm
+       recipeForm
     ])
-    
+    hideModal();
+
   }
   
 
