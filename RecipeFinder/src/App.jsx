@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -20,9 +20,11 @@ import Modal from './Modal'
 
 function App() {
 
-  const [CurCategory, setCategory] = useState(1)
+  const [CurCategory, setCategory] = useState(1);
 
-  const[recipes, setrecipes] = useState(recipesData)
+  const[recipes, setrecipes] = useState([]);
+// const[recipes, setrecipes] = useState(recipesData)
+
   const [modalVisiblity, setmodalvisibility] = useState(false);
   const [recipeForm, setrecipeForm] = useState({
     // image: {src : "", alt : ""},
@@ -31,6 +33,16 @@ function App() {
     ingredients: "",
     description: "",
   })
+
+  useEffect(() => {
+    async function fetchRecipes(){
+      console.log("fetching recipes");
+      const response = await fetch("http://localhost:3000/recipes");
+      const recipes = await response.json();
+      setrecipes(recipes);
+    }
+    fetchRecipes();
+  }, [])
 
 
   //catagory selectors that filter list based on selected button 
@@ -105,7 +117,7 @@ function App() {
     <h1 className='topbar-title'>Recipe Finder</h1>
 </div>
 
-<CurRecipe recipe={recipes[0]}/>
+{/* <CurRecipe recipe={recipes[0]}/> */}
 
 
 <form class="flex">
