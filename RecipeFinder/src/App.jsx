@@ -4,12 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import RecipeView from './RecipeView'
 import RecipeCard from './RecipeCard'
-import recipes from './recipes'
+import recipesData from './recipes'
 import Navbar from './navbar'
 import CurRecipe from './CurRecipe'
 import Modal from './Modal'
 
  const categorys = {
+    
     1 : "cookie",
     2 : "cake",
     3 : "cupcake",
@@ -21,7 +22,14 @@ function App() {
 
   const [CurCategory, setCategory] = useState(1)
 
+  const[recipes, setrecipes] = useState(recipesData)
   const [modalVisiblity, setmodalvisibility] = useState(false);
+  const [recipeForm, setrecipeForm] = useState({
+    name:"",
+    category: "",
+    ingredients: "",
+    description: "",
+  })
 
 
   //catagory selectors that filter list based on selected button 
@@ -52,6 +60,37 @@ function App() {
    const hideModal = () => {
     setmodalvisibility(false);
    }
+
+   const handleformInput = (e) => {
+    console.log(e.target.name, e.target.value);
+
+    //spreading an objects properties
+      setrecipeForm(recipeForm => {
+          return{
+            ...recipeForm,
+            [e.target.name]: e.target.value
+          }
+      });
+   }
+
+   //spreading an array of objects
+   const handleAddRecipeFormSubmit = (e) => {
+    e.preventDefault();
+
+    //resetting recipe form to blank slate
+    setrecipeForm({
+      name:"",
+      category: "",
+      ingredients: "",
+      description: "",
+    })
+
+    setrecipes([
+      ...recipes,
+      recipeForm
+    ])
+    
+  }
   
 
 
@@ -65,7 +104,6 @@ function App() {
 </div>
 
 <CurRecipe recipe={recipes[0]}/>
-
 
 
 <form class="flex">
@@ -104,8 +142,54 @@ function App() {
 
 
   <Modal isVisible={modalVisiblity} hideModal ={hideModal}>
+  <form>
+
+  <fieldset className="flex flex-col">
+            <label htmlFor="title">Recipe Title</label>
+            <input
+              onChange={handleformInput}
+              value={recipeForm.name}
+              type="text"
+              name="name"
+              id="name"
+              className="bg-white border-4 focus:outline-none p-2"
+            />
+  </fieldset>
+  <fieldset className="flex flex-col">
+            <label htmlFor="title">Category</label>
+            <input
+              onChange={handleformInput}
+              value={recipeForm.category}
+              type="text"
+              name="category"
+              id="category"
+              className="bg-white border-4 focus:outline-none p-2"
+            />
+  </fieldset>
+
+  <fieldset className="flex flex-col">
+            <label htmlFor="description">Description</label>
+            <input
+              onChange={handleformInput}
+              value={recipeForm.description}
+              type="text"
+              name="description"
+              id="description"
+              className="bg-white border-4 focus:outline-none p-2"
+            />
+  </fieldset>
+
+<input
+className="bg-blue-500 hover:bg-blue-600 text-white transition mt-4 py-2 cursor-pointer "
+type = "submit">
+</input>
+
+  </form>
+
   </Modal>
 
+
+{/* <RecipeView/> */}
   
 </> 
   )

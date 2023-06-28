@@ -1,5 +1,5 @@
 
-export default function  Modal({isVisible, hideModal}) {
+export default function  Modal({isVisible, hideModal, children}) {
  if(!isVisible) {return null}
 
     return(
@@ -13,8 +13,7 @@ export default function  Modal({isVisible, hideModal}) {
                 >Close tab</button>
                 <div className="bg-white text-gray-800 p-8">
                 <h1>Recipe Form</h1>
-                hello
-                {/* {children} */}
+                {children}
             </div>
 
             </div>
