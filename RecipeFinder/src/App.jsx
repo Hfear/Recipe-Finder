@@ -39,6 +39,7 @@ function App() {
       <button
       key={category}
       onClick= {() => setCategory(parseInt(category))}
+      className='button-categorys'
       >
         {categorys[category]}
       </button>
@@ -128,14 +129,14 @@ function App() {
 
 <div>
   <button
-  className=''
+  className='border-solid border-indigo-200 border-2 px-2 border-opacity-25 font-serif rounded'
   onClick={showModal}
 
   > + Add Recipe
   </button>
 </div>
 
-  <div className="View-container">
+  <div className="View-container ">
 
     {FrecipeCards}
 

@@ -35,9 +35,8 @@ h1 {
 }
 
 button {
-  margin : 3px;
-  height: 50px;
-  width: 100px;
+  /* margin : 3px;
+  width: 200px;
   border-radius: 3px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -46,7 +45,7 @@ button {
   font-family: inherit;
   background-color: #4f2537;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s; */
 
 }
 button:hover {
@@ -91,6 +90,21 @@ margin-top: 20px;
 .button-filters{
   display: flex;
   justify-content: center;
+  padding: 3px;
+}
+
+.button-categorys{
+  margin : 3px;
+  width: 200px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #4f2537;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
 
 .cur-recipe{
@@ -148,9 +162,9 @@ margin-top: 20px;
 
 .r-card{
   justify-content: center;
-
+  align-content: stretch;
   margin : 3px;
-  height: 220px;
+  height: 250px;
   width: 220px;
   border-radius: 1px;
   border: 1px solid white;
