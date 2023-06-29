@@ -1,3 +1,6 @@
+//NOT USING THIS ANYMORE USING DB.JSON
+//PLACEHOLDER ONLY
+
 //an array of recipe objects,,
 //hold the actual inner info of the recipies
 

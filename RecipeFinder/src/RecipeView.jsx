@@ -1,5 +1,7 @@
+
+
 import RecipeCard from "./RecipeCard"
-import recipes from "./recipes"
+import recipes from "./recipes";
 
 export default function RecipeView()
 {
