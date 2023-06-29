@@ -10,7 +10,7 @@ import CurRecipe from './CurRecipe'
 import Modal from './Modal'
 
  const categorys = {
-    
+    // 0 : "clear",
     1 : "cookie",
     2 : "cake",
     3 : "cupcake",
@@ -20,7 +20,7 @@ import Modal from './Modal'
 
 function App() {
 
-  const [CurCategory, setCategory] = useState(1);
+  const [CurCategory, setCategory] = useState(0);
 
   const[recipes, setrecipes] = useState([]);
 // const[recipes, setrecipes] = useState(recipesData)
