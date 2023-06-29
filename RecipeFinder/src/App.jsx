@@ -118,8 +118,7 @@ function App() {
     
     console.log('response', response);
     const savedForm = await response.json();
-    console.log('saved form', savedForm);
-    debugger; 
+    console.log('saved form', savedForm); 
     setrecipes([
       ...recipes,
        recipeForm
