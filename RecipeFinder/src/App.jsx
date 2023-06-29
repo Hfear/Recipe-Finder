@@ -25,6 +25,8 @@ function App() {
   const[recipes, setrecipes] = useState([]);
 // const[recipes, setrecipes] = useState(recipesData)
 
+const [CurrentRecipe, setCurrentRecipe] = useState({}) // the current selected card
+
   const [modalVisiblity, setmodalvisibility] = useState(false);
   const [recipeForm, setrecipeForm] = useState({
     // image: {src : "", alt : ""},
@@ -66,6 +68,13 @@ function App() {
    const FrecipeCards = filteredRecipes.map((recipe,i) =>{
      return <RecipeCard recipe={recipe} key = {i} />
    });
+
+   //updating the current recipe view
+   const updateCurRecipe = ({recipe}) => {
+    setCurrentRecipe({recipe});
+   }
+  
+
 
    //Modal Visibility functions
    const showModal = () => {
@@ -138,7 +147,7 @@ function App() {
     <h1 className='topbar-title'>Recipe Finder</h1>
 </div>
 
-{/* <CurRecipe recipe={recipes[0]}/> */}
+  <CurRecipe recipe={CurrentRecipe}/> 
 
 
 <form class="flex items-center justify-center">
