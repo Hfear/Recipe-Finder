@@ -181,6 +181,18 @@ function App() {
   onSubmit={handleRecipeFormSubmit}>
 
   <fieldset className="flex flex-col">
+            <label htmlFor="title">Recipe image</label>
+            <input
+              onChange={handleformInput}
+              value={recipeForm.image}
+              type="text"
+              name="image"
+              id="img"
+              className="bg-pink-50 border-4 focus:outline-none p-2"
+            />
+  </fieldset>
+
+  <fieldset className="flex flex-col">
             <label htmlFor="title">Recipe Title</label>
             <input
               onChange={handleformInput}
