@@ -107,19 +107,19 @@ function App() {
 
   
 
-    const response = await fetch("http://localhost:3000/recipes", {
+    const response = await fetch("http://127.0.0.1:3000/recipes", {
       method: "POST",
       Headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(recipeForm),
+      body: JSON.stringify({a : 1}),
 
     });
     
     console.log('response', response);
     const savedForm = await response.json();
     console.log('saved form', savedForm);
-
+    debugger; 
     setrecipes([
       ...recipes,
        recipeForm
@@ -142,7 +142,7 @@ function App() {
 {/* <CurRecipe recipe={recipes[0]}/> */}
 
 
-<form class="flex">
+<form class="flex items-center justify-center">
   <label for="default-search" class="sr-only">Search</label>
   <div class="relative flex-grow">
     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -152,7 +152,7 @@ function App() {
     </div>
     <input type="text" id="default-search" 
   onChange={(entered) => setCategory(Object.keys(categorys).find((key) => categorys[key] === entered.target.value))}
-  class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search dessert type..." required />
+  class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="Search dessert type..." required />
   </div>
   <button type="submit"
    className ="ml-2 text-white bg-indigo-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-indigo-900 dark:hover:bg-indigo-700 dark:focus:ring-purple-800">Search</button>
