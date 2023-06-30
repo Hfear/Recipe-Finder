@@ -4,7 +4,7 @@ import CurRecipe from "./CurRecipe";
 
 
 
-export default function RecipeCard({recipe})
+export default function RecipeCard({recipe, updateCurRecipe})
 {
     // this is taking in a single object from our js file that is an array which holds all our recipe info/recipe objects 
 
@@ -17,7 +17,7 @@ export default function RecipeCard({recipe})
     } = recipe; 
 
     function handleClick(){
-        setState()
+        updateCurRecipe (recipe = {recipe});
     }
 
     return (
