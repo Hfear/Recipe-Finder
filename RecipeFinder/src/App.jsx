@@ -256,6 +256,8 @@ const searchedrecipeCards = filteredR.map((recipe,i) =>{
             />
   </fieldset>
 
+  
+
 <input
 className="bg-indigo-400 bg-opacity-95 px-2 rounded hover:bg-indigo-600 text-white transition mt-4 py-2 cursor-pointer "
 type = "submit">
