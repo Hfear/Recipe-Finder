@@ -9,6 +9,10 @@ import Navbar from './navbar'
 import CurRecipe from './CurRecipe'
 import Modal from './Modal'
 import Search from './Search'
+import { Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+
 
  const categorys = {
     0 : "clear",
@@ -54,22 +58,15 @@ const [CurrentRecipe, setCurrentRecipe] = useState({}) // the current selected c
 //filtering the list based off of what search was typed
 
 useEffect(() => {
-  console.log({recipes});
   const RecipesCopy = JSON.parse(JSON.stringify(recipes));
-  console.log({RecipesCopy});
   const searchRecipes = RecipesCopy.filter(recipe => {
 
-    // return recipe.name.toUpperCase().includes(CurSearch.toUpperCase);
     const recipeName = recipe.name.toUpperCase();
   const searchQuery = CurSearch.toUpperCase();
-  console.log(recipeName, searchQuery); // Check if the values are correct
   return recipeName.includes(searchQuery);
   } ) 
-console.log(CurSearch);
-console.log({searchRecipes});
 
 setfilteredR(searchRecipes);
-console.log("recipes filtered" + {recipes})
 
 },[CurSearch]);
 
@@ -184,6 +181,11 @@ const searchedrecipeCards = filteredR.map((recipe,i) =>{
 <div >
     <h1 className='topbar-title'>Recipe Finder</h1>
 </div>
+
+  <div>
+    <Outlet/>
+  </div>
+
 
   <CurRecipe recipe={CurrentRecipe}/> 
 
