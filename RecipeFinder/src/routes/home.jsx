@@ -15,7 +15,7 @@ const categorys = {
 
   export default function Home() {
     const [CurCategory, setCategory] = useState(0);
-    const [CurSearch, setSearch] = useState(""); 
+    const [CurSearch, setSearch] = useState(" "); 
     const[recipes, setrecipes] = useState([]);
     const[filteredR, setfilteredR] = useState([]);
 
@@ -60,23 +60,20 @@ const categorys = {
     return <RecipeCard recipe={recipe} key = {i} />
   });
   
-  
-  
     //catagory selectors that filter list based on selected button 
     const buttons = Object.keys(categorys).map(category => {
       return (
         <div className='button-filters m-1'>
-        <button
+        <NavLink
         key={category}
         onClick= {() => setCategory(parseInt(category))}
         className='button-categorys'
         >
           {categorys[category]}
-        </button>
+        </NavLink>
         </div>
       );
     });
-  
   
      //filtering the list based off of what category was clicked
      const filteredRecipes = recipes.filter(recipe => recipe.category === categorys[CurCategory] )
@@ -85,6 +82,11 @@ const categorys = {
      const FrecipeCards = filteredRecipes.map((recipe,i) =>{
        return <RecipeCard recipe={recipe} key = {i} />
      });
+
+     const AllrecipeCards = recipes.map((recipe,i) =>{
+        return <RecipeCard recipe={recipe} key = {i} />
+      });
+
   
   
      //updating the current recipe view
@@ -126,13 +128,7 @@ const categorys = {
         ingredients: "",
         description: "",
       })
-  
-      // setrecipes([
-      //   ...recipes,
-      //   recipeForm
-      // ])
-  
-    
+
   
       const response = await fetch("http://127.0.0.1:3000/recipes", {
         method: "POST",
@@ -154,11 +150,11 @@ const categorys = {
   
     }
     
-    const AllrecipeCards = recipes.map((recipe,i) =>{
-      return <RecipeCard recipe={recipe} key = {i} />
-    });
+   
   
-   return ( 
+
+
+ return ( 
   <>
   
   
@@ -188,7 +184,8 @@ const categorys = {
   
     <div className="View-container ">
     
-  
+
+
       {/* {AllrecipeCards} */}
       {searchedrecipeCards}
       {FrecipeCards}
