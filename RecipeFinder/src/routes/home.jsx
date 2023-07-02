@@ -5,6 +5,9 @@ import { Outlet } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Search from '../Search';
 
+
+
+
 const categorys = {
     0 : "clear",
     1 : "cookie",
@@ -30,15 +33,19 @@ const categorys = {
   
   
     //loading recipe info from database
-    useEffect(() => {
-      async function fetchRecipes(){
-        // console.log("fetching recipes");
-        const response = await fetch("http://localhost:3000/recipes");
-        const recipes = await response.json();
-        setrecipes(recipes);
-      }
-      fetchRecipes();
-    }, [])
+   
+    // useEffect(() => {
+    //   async function fetchRecipes(){
+    //     // console.log("fetching recipes");
+    //     const response = await fetch("http://localhost:3000/recipes");
+    //     const recipes = await response.json();
+    //     setrecipes(recipes);
+    //   }
+    //   fetchRecipes();
+    // }, [])
+
+
+
   
   //filtering the list based off of what search was typed
   

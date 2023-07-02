@@ -10,6 +10,8 @@ import ErrorPage from './ErrorPage.jsx';
 import Root from "./routes/root";
 import Home from './routes/home.jsx';
 import About from './routes/About.jsx';
+import Recipe from './routes/recipe.jsx';
+import RecipeList, { loader as recipesLoader}  from './RecipeList.jsx';
 
 
 
@@ -23,15 +25,30 @@ const router = createBrowserRouter([
       {
         path: "home",
         element: <Home />,
+        children: [
+          {
+          path: "",
+          element: <RecipeList/>,
+          loader: recipesLoader
+          },
+        ],
+
       },
       {
         path: "about",
         element: <About />,
+        errorElement: <ErrorPage />,
+
       },
 
     ]
 
   },
+  {
+    path: "Recipes/ : recipeId",
+    element: <Recipe/>,
+    errorElement: <ErrorPage/>,
+  }
  
   
 ]);
