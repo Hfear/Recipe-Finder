@@ -41,6 +41,7 @@ const router = createBrowserRouter([
             // errorElement: <ErrorPage />,
     
           },
+         
         ],
 
       },
@@ -50,13 +51,13 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
 
       },
-      {
-        path: "recipes/:recipeId",
-        element: <Recipe />,
-        errorElement: <ErrorPage />,
-        loader: recipeDetailLoader,
-
-      },
+       {
+            path: "recipes/:recipeId",
+            element: <Recipe />,
+            errorElement: <ErrorPage />,
+            loader: recipeDetailLoader,
+    
+          },
 
 
       // {
