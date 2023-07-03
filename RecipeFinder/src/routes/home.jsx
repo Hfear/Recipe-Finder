@@ -18,8 +18,9 @@ const categorys = {
 
   export default function Home() {
     const [CurCategory, setCategory] = useState(0);
-    const [CurSearch, setSearch] = useState(" "); 
     const[recipes, setrecipes] = useState([]);
+    
+    const [CurSearch, setSearch] = useState(" "); //comment out
     const[filteredR, setfilteredR] = useState([]); // set as recipes
 
     const [modalVisiblity, setmodalvisibility] = useState(false);
@@ -180,7 +181,7 @@ const categorys = {
       <h1 className='topbar-title'>Recipe Finder</h1>
   </div>
 
-  <Search setSearch={setSearch}/>
+  {/* <Search setSearch={setSearch}/> */}
   
   
   <div className='button-filters m-1'> {buttons} </div>
