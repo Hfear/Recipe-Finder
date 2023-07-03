@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 import RecipeCard from '../RecipeCard';
 import Modal from '../Modal';
-import { Outlet } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Outlet, NavLink, Link } from "react-router-dom";
 import Search from '../Search';
 
 
@@ -68,15 +67,16 @@ const categorys = {
   });
   
     //catagory selectors that filter list based on selected button 
-    const buttons = Object.keys(categorys).map(category => {
+    const buttons = Object.keys(categorys).map(categoryId => {
       return (
         <div className='button-filters m-1'>
         <NavLink
-        key={category}
-        onClick= {() => setCategory(parseInt(category))}
+        to = {'/recipes/byCategory/${categorys[categoryId]'}
+        key={categoryId}
+        onClick= {() => setCategory(parseInt(categoryId))}
         className='button-categorys'
         >
-          {categorys[category]}
+          {categorys[categoryId]}
         </NavLink>
         </div>
       );
@@ -163,17 +163,14 @@ const categorys = {
 
  return ( 
   <>
-  
-  
-  <div >
+
+ <div >
       <h1 className='topbar-title'>Recipe Finder</h1>
   </div>
-  
-    <div>
+
+  <div>
       <Outlet/>
     </div>
-  
-    
   
   <Search setSearch={setSearch}/>
   
@@ -181,12 +178,12 @@ const categorys = {
   <div className='button-filters m-1'> {buttons} </div>
   
   <div>
-    <button
+    <Link to = "/recipes"
     className='border-solid border-indigo-200 border-2 px-2 border-opacity-25 font-serif rounded m-1'
     onClick={showModal}
-  
-    > + Add Recipe
-    </button>
+    >
+       + Add Recipe
+    </Link>
   </div>
   
     <div className="View-container ">
