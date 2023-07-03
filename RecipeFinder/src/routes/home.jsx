@@ -178,7 +178,7 @@ const categorys = {
   <div className='button-filters m-1'> {buttons} </div>
   
   <div>
-    <Link to = "/recipes"
+    <Link to = "/recipes/new"
     className='border-solid border-indigo-200 border-2 px-2 border-opacity-25 font-serif rounded m-1'
     onClick={showModal}
     >
