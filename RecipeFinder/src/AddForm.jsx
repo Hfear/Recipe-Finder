@@ -10,16 +10,16 @@ export async function action({request, params}){
 let formData = await request.formData();
 let recipeData = Object.fromEntries(formData);
 
-    const response = await fetch("http://127.0.0.1:3000/recipes", {
+    const response = await fetch('http://127.0.0.1:3000/recipes', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(recipeForm),
+        body: JSON.stringify(recipeData),
   
       });
       console.log(response)
-return redirect('/');
+return redirect('/home');
 
 }
 

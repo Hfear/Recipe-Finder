@@ -20,7 +20,7 @@ const categorys = {
     const [CurCategory, setCategory] = useState(0);
     const [CurSearch, setSearch] = useState(" "); 
     const[recipes, setrecipes] = useState([]);
-    const[filteredR, setfilteredR] = useState([]);
+    const[filteredR, setfilteredR] = useState([]); // set as recipes
 
     const [modalVisiblity, setmodalvisibility] = useState(false);
     const [recipeForm, setrecipeForm] = useState({
@@ -34,15 +34,15 @@ const categorys = {
   
     //loading recipe info from database
    //OLD IMPORT FROM DATABASE, COMMENT AFTER ADD FORM IS SEPERATED
-    useEffect(() => {
-      async function fetchRecipes(){
-        // console.log("fetching recipes");
-        const response = await fetch("http://localhost:3000/recipes");
-        const recipes = await response.json();
-        setrecipes(recipes);
-      }
-      fetchRecipes();
-    }, [])
+    // useEffect(() => {
+    //   async function fetchRecipes(){
+    //     // console.log("fetching recipes");
+    //     const response = await fetch("http://localhost:3000/recipes");
+    //     const recipes = await response.json();
+    //     setrecipes(recipes);
+    //   }
+    //   fetchRecipes();
+    // }, [])
 //************************************************************** */
 
 
@@ -180,10 +180,6 @@ const categorys = {
       <h1 className='topbar-title'>Recipe Finder</h1>
   </div>
 
-  <div>
-      <Outlet/>
-    </div>
-  
   <Search setSearch={setSearch}/>
   
   
@@ -201,11 +197,7 @@ const categorys = {
   
     <div className="View-container ">
     
-
-
-      {/* {AllrecipeCards} */}
-      {searchedrecipeCards}
-      {FrecipeCards}
+      {/* {AllrecipeCards} */}  {/* {searchedrecipeCards}  {FrecipeCards} */}
   
     </div>
   
@@ -262,6 +254,11 @@ const categorys = {
     </form> */}
   
     </Modal>
+
+<div>
+
+<Outlet/>
+</div>
   
   
   {/* <RecipeView/> */}

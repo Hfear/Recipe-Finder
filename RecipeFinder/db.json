@@ -50,34 +50,7 @@
       "ingredients": "",
       "description": "cookiesss",
       "id": 5
-    },
-    {
-      "name": "lemon cookies",
-      "category": "cookie",
-      "ingredients": "",
-      "description": "cookiesss",
-      "id": 6
-    },
-    {
-      "name": "flan",
-      "category": "cake",
-      "ingredients": "",
-      "description": "yum",
-      "id": 7
-    },
-    {
-      "name": "bundt cake",
-      "category": "cake",
-      "ingredients": "",
-      "description": "so good",
-      "id": 8
-    },
-    {
-      "name": "lemon cookies",
-      "category": "cookie",
-      "ingredients": "",
-      "description": "cookiesss",
-      "id": 9
     }
+    
   ]
 }

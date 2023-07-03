@@ -16,6 +16,7 @@ import AddForm, {action as addFormAction } from './AddForm.jsx';
 
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       {
         path: "home",
         element: <Home />,
+
         children: [
           {
           path: "",
@@ -35,8 +37,8 @@ const router = createBrowserRouter([
           {
             path: "recipes/new",
             element: <AddForm />,
-            action :addFormAction,
-            errorElement: <ErrorPage />,
+            action : addFormAction,
+            // errorElement: <ErrorPage />,
     
           },
         ],
@@ -54,16 +56,23 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
 
       },
+      // {
+      //   path: "/recipes/new",
+      //   element: <AddForm />,
+      //   action : addFormAction,
+      //   // errorElement: <ErrorPage />,
+
+      // },
      
 
     ]
 
   },
-  {
-    path: "Recipes/ : recipeId",
-    element: <Recipe/>,
-    errorElement: <ErrorPage/>,
-  }
+  // {
+  //   path: "Recipes/:recipeId",
+  //   element: <Recipe/>,
+  //   errorElement: <ErrorPage/>,
+  // }
  
   
 ]);
