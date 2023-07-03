@@ -10,7 +10,7 @@ import ErrorPage from './ErrorPage.jsx';
 import Root from "./routes/root";
 import Home from './routes/home.jsx';
 import About from './routes/About.jsx';
-import Recipe from './routes/recipe.jsx';
+import Recipe, {loader as recipeDetailLoader} from './routes/recipe.jsx';
 import RecipeList, { loader as recipesLoader}  from './RecipeList.jsx';
 import AddForm, {action as addFormAction } from './AddForm.jsx';
 
@@ -54,8 +54,11 @@ const router = createBrowserRouter([
         path: "recipes/:recipeId",
         element: <Recipe />,
         errorElement: <ErrorPage />,
+        loader: recipeDetailLoader,
 
       },
+
+
       // {
       //   path: "/recipes/new",
       //   element: <AddForm />,
