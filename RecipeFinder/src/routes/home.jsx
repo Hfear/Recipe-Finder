@@ -3,6 +3,7 @@ import RecipeCard from '../RecipeCard';
 import Modal from '../Modal';
 import { Outlet, NavLink, Link } from "react-router-dom";
 import Search from '../Search';
+import AddForm from '../AddForm';
 
 
 
@@ -32,17 +33,17 @@ const categorys = {
   
   
     //loading recipe info from database
-   
-    // useEffect(() => {
-    //   async function fetchRecipes(){
-    //     // console.log("fetching recipes");
-    //     const response = await fetch("http://localhost:3000/recipes");
-    //     const recipes = await response.json();
-    //     setrecipes(recipes);
-    //   }
-    //   fetchRecipes();
-    // }, [])
-
+   //OLD IMPORT FROM DATABASE, COMMENT AFTER ADD FORM IS SEPERATED
+    useEffect(() => {
+      async function fetchRecipes(){
+        // console.log("fetching recipes");
+        const response = await fetch("http://localhost:3000/recipes");
+        const recipes = await response.json();
+        setrecipes(recipes);
+      }
+      fetchRecipes();
+    }, [])
+//************************************************************** */
 
 
   
@@ -123,6 +124,17 @@ const categorys = {
         });
      }
   
+
+      //NEW ON ADD FORM****************
+      const onAddForm = (newRecipe) => {
+        hideModal();
+        setrecipes([
+          ...recipes,
+           recipeForm
+        ])
+
+      }
+
      //spreading an array of objects
      const handleRecipeFormSubmit = async (e) => 
      {
@@ -178,12 +190,13 @@ const categorys = {
   <div className='button-filters m-1'> {buttons} </div>
   
   <div>
-    <Link to = "/recipes/new"
+   
+    {/* <Link to = "/recipes/new" */} <button
     className='border-solid border-indigo-200 border-2 px-2 border-opacity-25 font-serif rounded m-1'
     onClick={showModal}
     >
        + Add Recipe
-    </Link>
+    {/* </Link> */}</button>
   </div>
   
     <div className="View-container ">
@@ -198,7 +211,9 @@ const categorys = {
   
   
     <Modal isVisible={modalVisiblity} hideModal ={hideModal}>
-  
+
+      <AddForm onAddForm = {onAddForm}/>
+{/*   
     <form
     onSubmit={handleRecipeFormSubmit}>
   
@@ -244,7 +259,7 @@ const categorys = {
   type = "submit">
   </input>
   
-    </form>
+    </form> */}
   
     </Modal>
   
