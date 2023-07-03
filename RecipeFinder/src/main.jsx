@@ -12,7 +12,7 @@ import Home from './routes/home.jsx';
 import About from './routes/About.jsx';
 import Recipe from './routes/recipe.jsx';
 import RecipeList, { loader as recipesLoader}  from './RecipeList.jsx';
-import AddForm from './AddForm.jsx';
+import AddForm, {action as addFormAction } from './AddForm.jsx';
 
 
 
@@ -35,6 +35,7 @@ const router = createBrowserRouter([
           {
             path: "recipes/new",
             element: <AddForm />,
+            action :addFormAction,
             errorElement: <ErrorPage />,
     
           },

@@ -1,4 +1,6 @@
 
+// import AddForm from "./AddForm"
+
 export default function  Modal({isVisible, hideModal, children}) {
  if(!isVisible) {return null}
 
@@ -17,6 +19,7 @@ export default function  Modal({isVisible, hideModal, children}) {
                 <h1 
                 className="text-indigo-900 font-serif p-1">Recipe Form</h1>
                 {children}
+                
             </div>
 
             </div>
