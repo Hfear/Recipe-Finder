@@ -191,12 +191,12 @@ const categorys = {
   
   <div>
    
-    {/* <Link to = "/recipes/new" */} <button
+    <Link to = "/home/recipes/new" 
     className='border-solid border-indigo-200 border-2 px-2 border-opacity-25 font-serif rounded m-1'
     onClick={showModal}
     >
        + Add Recipe
-    {/* </Link> */}</button>
+    </Link>
   </div>
   
     <div className="View-container ">
