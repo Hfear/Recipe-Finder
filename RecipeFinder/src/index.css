@@ -10,6 +10,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #1a152ee2;
+ 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -137,6 +138,11 @@ margin-top: 20px;
   min-height: 100px;
 }
 
+/* ABOUT PAGE */
+.aboutPg{
+  background-image: "" ;
+}
+
 
 
 
@@ -156,8 +162,11 @@ margin-top: 20px;
   border: 1px solid white;
   /* flex-wrap: wrap;
   align-items: center; */
+   background-image: url("https://media.istockphoto.com/id/1092095806/vector/sweet-food-seamless-pattern-with-flat-line-icons-pastry-vector-illustrations-lollipop.jpg?s=612x612&w=0&k=20&c=kn-z2hN4qiNBQVKRQqcMxctxTDEYfPVU1svl6ysUrkw=");
+
  
 }
+
 
 
 .r-card{

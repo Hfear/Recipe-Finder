@@ -1,6 +1,5 @@
 // our component of recipe card that will hold the image and tile,, and link a single recipe 
 
-import CurRecipe from "./CurRecipe";
 import {PropTypes} from "prop-types";
 import {Link} from "react-router-dom";
 import {BiSolidFoodMenu} from "react-icons/bi"

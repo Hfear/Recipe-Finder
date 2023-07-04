@@ -6,7 +6,6 @@ import RecipeView from './RecipeView'
 import RecipeCard from './RecipeCard'
 import recipesData from './recipes'
 import Navbar from './navbar'
-import CurRecipe from './CurRecipe'
 import Modal from './Modal'
 import Search from './Search'
 import { Outlet } from "react-router-dom";
