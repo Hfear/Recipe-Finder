@@ -13,9 +13,7 @@ import About from './routes/About.jsx';
 import Recipe, {loader as recipeDetailLoader} from './routes/recipe.jsx';
 import RecipeList, { loader as recipesLoader}  from './RecipeList.jsx';
 import AddForm, {action as addFormAction } from './AddForm.jsx';
-import EditRecipe, {loader as editrecipeloader} from './routes/editRecipe.jsx';
-
-
+import EditRecipe, {loader as editrecipeloader, action as editAction} from './routes/editRecipe.jsx';
 
 
 const router = createBrowserRouter([
@@ -63,6 +61,7 @@ const router = createBrowserRouter([
         element: <EditRecipe />,
         errorElement: <ErrorPage />,
         loader: editrecipeloader,
+        action : editAction
     
       },
 

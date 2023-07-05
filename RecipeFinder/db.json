@@ -5,7 +5,7 @@
         "src": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NXx8Y2FrZXxlbnwwfHx8fDE2ODc1NTcwNzd8MA&ixlib=rb-4.0.3&dpr=1&auto=format&fit=crop&w=120&h=200&q=60",
         "alt": "chocolate cake"
       },
-      "name": "chocolate cake",
+      "name": "chocolate cake!",
       "category": "cake",
       "ingredients": "all-purpose flour,sugar, unsweetened cocoa powder, baking powder, baking soda, salt, espresso powder,  milk, oil, eggs, vanilla extract, boiling water",
       "description": "A one bowl chocolate cake recipe that is quick, easy, and delicious!",
@@ -51,6 +51,5 @@
       "description": "cookiesss",
       "id": 5
     }
-    
   ]
 }

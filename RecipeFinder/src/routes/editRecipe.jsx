@@ -3,14 +3,15 @@ import { categorybyId } from "../utils";
 
 export async function loader({ params }) {
     const recipeResponse = await fetch(`http://localhost:3000/recipes/${params.recipeId}`);
-    console.log(recipeResponse);
+    // console.log(recipeResponse);
     const recipe = await recipeResponse.json();
-    console.log(recipe);
+    // console.log(recipe);
     return { recipe };
   }
 
   export async function action({ request, params }) {
     const formData = await request.formData();
+    console.log(formData);
     const updates = Object.fromEntries(formData);
     
     const response = await fetch(`http://localhost:3000/recipes/${params.recipeId}`, { 
@@ -19,13 +20,13 @@ export async function loader({ params }) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify(updates)
-  })
+  });
+
+  console.log(response);
   
-  return redirect(`/jobs/${params.recipeId}`)
+  return redirect(`/recipes/${params.recipeId}`)
 }
   
-
- 
 
   export default function EditRecipe(){
     const {recipe} = useLoaderData();
@@ -41,7 +42,7 @@ export async function loader({ params }) {
     return(
     <>
 
-    <Form>
+    <Form method="post">
 
     <fieldset className="flex flex-col gap-4 m-2 items-center">
             <label htmlFor="title">Recipe Title</label>

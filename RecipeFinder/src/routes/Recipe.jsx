@@ -1,5 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { FaPenAlt} from "react-icons/fa";
+import { FaPenAlt, FaTrash} from "react-icons/fa";
 
 // import{categorybyId} from "../utils"
 
