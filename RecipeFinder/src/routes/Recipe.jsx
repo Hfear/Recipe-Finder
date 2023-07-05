@@ -25,9 +25,10 @@ export default function Recipe(){
 
 return (
   <>
-        <Link to="/home">{'<'} Back</Link>
+        <Link to={"/home"}> {'<'} Back </Link>
 <h1>{name}</h1>
-<Link
+
+<Link to = {"/recipes/:recipeId/edit"}
 className="gap-2 p-20 m-1">
 <FaPenAlt />
 </Link>

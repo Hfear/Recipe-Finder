@@ -10,6 +10,6 @@ export const categorybyId = {
 
 // object with category as keys and id as value 
 export const categoryIdbyText = Object.keys(categorybyId).reduce((obj, id) => {
-    obj[statusTextById[id]] = id;
+    obj[categorybyId[id]] = id;
     return obj;
   }, {})

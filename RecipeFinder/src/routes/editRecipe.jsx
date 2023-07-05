@@ -10,6 +10,8 @@ export async function loader({ params }) {
   export default function editRecipe(){
     const {recipe} = useLoaderData();
 
+
+    
     const categoryOptions = Object.keys(categorybyId).map((id) => {
         return (
           <option key={id} value={id}>
@@ -18,57 +20,54 @@ export async function loader({ params }) {
         );
       });
 
-      return(
-<>
+    return(
+    <>
 
-<Form
-method = "post"
-// onSubmit={handleRecipeFormSubmit}
->
+    <Form>
 
-<fieldset className="flex flex-col">
-          <label htmlFor="title">Recipe Title</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            className="bg-pink-50 border-4 focus:outline-none p-2"
-            defaultValue={recipe.name}
-          />
-</fieldset>
-<fieldset className="flex flex-col">
-          <label htmlFor="title">Category</label>
-          <input
-            type="text"
-            name="category"
-            id="category"
-            className="bg-pink-50 bg-white border-4 focus:outline-none p-2"
-            defaultValue={recipe.category}
+    <fieldset className="flex flex-col">
+            <label htmlFor="title">Recipe Title</label>
+            <input
+                type="text"
+                name="name"
+                id="name"
+                className="bg-pink-50 border-4 focus:outline-none p-2"
+                defaultValue={recipe.name}
+            />
+    </fieldset>
+    <fieldset className="flex flex-col">
+            <label htmlFor="title">Category</label>
+            <input
+                type="text"
+                name="category"
+                id="category"
+                className="bg-pink-50 bg-white border-4 focus:outline-none p-2"
+                defaultValue={recipe.category}
 
-          />
-</fieldset>
+            />
+    </fieldset>
 
-<fieldset className="flex flex-col">
-          <label htmlFor="description">Description</label>
-          <input
-            type="text"
-            name="description"
-            id="description"
-            className="bg-pink-50 bg-white border-4 focus:outline-none p-2"
-            defaultValue={recipe.description}
+    <fieldset className="flex flex-col">
+            <label htmlFor="description">Description</label>
+            <input
+                type="text"
+                name="description"
+                id="description"
+                className="bg-pink-50 bg-white border-4 focus:outline-none p-2"
+                defaultValue={recipe.description}
 
-          />
-</fieldset>
+            />
+    </fieldset>
 
 
 
-<input
-className="bg-indigo-400 bg-opacity-95 px-2 rounded hover:bg-indigo-600 text-white transition mt-4 py-2 cursor-pointer "
-type = "submit">
-</input>
+    <input
+    className="bg-indigo-400 bg-opacity-95 px-2 rounded hover:bg-indigo-600 text-white transition mt-4 py-2 cursor-pointer "
+    type = "submit">
+    </input>
 
-</Form>
-</>
+    </Form>
+    </>
       )
 
 
