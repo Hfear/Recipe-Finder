@@ -52,20 +52,12 @@
       "id": 5
     }
   ],
-  
-  "reviews":[
+  "reviews": [
     {
       "username": "Hannah",
-      "recipeId" : 1 ,
-      "review": "wow was so good",
-      "id" : 1
-    },
-    {
-      "username": "Hannah",
-      "recipeId" : 2 ,
+      "recipeId": 2,
       "review": "wow was so so good",
-      "id" : 1
+      "id": 1
     }
-  
-    ]
+  ]
 }

@@ -1,4 +1,4 @@
-import { Link, useLoaderData, Form} from "react-router-dom";
+import { Link, useLoaderData, Form, useFetcher } from "react-router-dom";
 import { FaPenAlt, FaRegTrashAlt} from "react-icons/fa";
 
 // import{categorybyId} from "../utils"
@@ -15,9 +15,20 @@ export async function loader({params}){
   return {recipe, reviews};
 }
 
+export async function action({ request, params }) {
+  const formData = await request.formData();
+  if (formData.get("action") === "deleteNote") {
+    const response = await fetch(`http://localhost:3000/reviews/${formData.get("reviewId")}`, { method: "DELETE" })
+    return { ok: true };
+  }
+
+  
+}
+
 export default function Recipe(){
 
   const { recipe, reviews } = useLoaderData();
+  const fetcher = useFetcher();
 
   const{
     id,
@@ -39,17 +50,20 @@ const mappedReviews = reviews.map((review) => {
       <div> 
       "{review.review}" </div>
 
-      <Form
+      <fetcher.Form
        method="post"
-       action={`/reviews${recipe.id}/destroy?recipebId=${id}`}
        onSubmit={(event) => {
          if (!confirm("Please confirm you want to delete this review.")) {
            event.preventDefault();
          }
        }}
       >
+
+    <input type="hidden" name="action" value="deleteNote" />
+    <input type="hidden" name="reviewId" value={review.id} />
       <button> <FaRegTrashAlt/></button>
-      </Form>
+
+      </fetcher.Form>
       
       </div>
      
@@ -63,7 +77,7 @@ return (
 <h1>{name}</h1>
 
 <Link to = {`/recipes/${id}/edit`}
-className="gap-2 p-20 m-1">
+className="gap-2 p-2 m-1">
 <FaPenAlt />
 </Link>
 

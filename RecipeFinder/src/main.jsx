@@ -10,10 +10,12 @@ import ErrorPage from './ErrorPage.jsx';
 import Root from "./routes/root";
 import Home from './routes/home.jsx';
 import About from './routes/About.jsx';
-import Recipe, {loader as recipeDetailLoader} from './routes/recipe.jsx';
+import Recipe, {loader as recipeDetailLoader, action as deleteReviewAction} from './routes/recipe.jsx';
 import RecipeList, { loader as recipesLoader}  from './RecipeList.jsx';
 import AddForm, {action as addFormAction } from './AddForm.jsx';
 import EditRecipe, {loader as editrecipeloader, action as editAction} from './routes/editRecipe.jsx';
+
+
 
 
 const router = createBrowserRouter([
@@ -55,6 +57,7 @@ const router = createBrowserRouter([
         element: <Recipe />,
         errorElement: <ErrorPage />,
         loader: recipeDetailLoader,
+        action: deleteReviewAction,
       },
       {
         path: "recipes/:recipeId/edit",
@@ -64,6 +67,10 @@ const router = createBrowserRouter([
         action : editAction
     
       },
+      // {
+      //   path: "reviews/:reviewId/destroy",
+      //   action : destroyReviewAction,
+      // }
 
       // {
       //   path: "/recipes/new",
