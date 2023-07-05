@@ -51,5 +51,21 @@
       "description": "cookiesss",
       "id": 5
     }
-  ]
+  ],
+  
+  "reviews":[
+    {
+      "username": "Hannah",
+      "recipeId" : 1 ,
+      "review": "wow was so good",
+      "id" : 1
+    },
+    {
+      "username": "Hannah",
+      "recipeId" : 2 ,
+      "review": "wow was so so good",
+      "id" : 1
+    }
+  
+    ]
 }
