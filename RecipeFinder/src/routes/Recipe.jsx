@@ -28,7 +28,7 @@ return (
         <Link to={"/home"}> {'<'} Back </Link>
 <h1>{name}</h1>
 
-<Link to = {"/recipes/:recipeId/edit"}
+<Link to = {`/recipes/${id}/edit`}
 className="gap-2 p-20 m-1">
 <FaPenAlt />
 </Link>
