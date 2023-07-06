@@ -180,9 +180,11 @@ margin-top: 20px;
 }
 .r-clicked-img{
   min-height: 300px; 
+  max-height:  500px;
   box-shadow: 10px 10px 20px rgba(22, 4, 43, 0.352);
+  
 
-  margin: auto;
+  margin: 3px;
   border-radius: 1px;
   border: 1px solid rgb(72, 4, 89);
 }
