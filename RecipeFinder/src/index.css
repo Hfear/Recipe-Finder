@@ -175,15 +175,15 @@ margin-top: 20px;
   justify-content: center;
   align-content: stretch;
   margin : 3px;
-  height: 250px;
-  width: 220px;
+  height: 350px;
+  width: 320px;
   border-radius: 1px;
-  border: 1px solid white;
+  border: 1px solid rgb(71, 8, 74);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #341e2d;
+  background-color: #251e34e0;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -194,13 +194,17 @@ margin-top: 20px;
   border-width: 3px;
   color: #646cff;
   transition: transform 0.3s ease;
+  
 }
 
 .r-img{
-  height: 150px;
+  height: 250px; 
+  box-shadow: 10px 10px 20px rgba(22, 4, 43, 0.352);
+
+
   margin: auto;
   border-radius: 1px;
-  border: 1px solid white;
+  border: 1px solid rgb(72, 4, 89);
 }
 
 .r-name{

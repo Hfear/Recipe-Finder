@@ -56,6 +56,12 @@
       "category": "cake",
       "description": "good enough",
       "id": 6
+    },
+    {
+      "name": "chocolate waffle",
+      "category": "cake",
+      "description": "so good",
+      "id": 7
     }
   ],
   "reviews": [
@@ -66,52 +72,22 @@
       "id": 1
     },
     {
-      "username": "simon",
-      "review": "bad",
-      "recipeId": null,
+      "username": "simona",
+      "review": "yummy",
+      "recipeId": 6,
+      "id": 5
+    },
+    {
+      "username": "felix",
+      "review": "so easy to make",
+      "recipeId": 3,
       "id": 5
     },
     {
       "username": "simon",
-      "review": "bad",
-      "recipeId": null,
-      "id": 6
-    },
-    {
-      "username": "simon",
-      "review": "bad",
-      "recipeId": null,
-      "id": 7
-    },
-    {
-      "username": "simon",
-      "review": "bad",
-      "recipeId": null,
-      "id": 8
-    },
-    {
-      "username": "simon",
-      "review": "bad",
-      "recipeId": null,
-      "id": 9
-    },
-    {
-      "username": "simon",
-      "review": "bad",
-      "recipeId": null,
-      "id": 10
-    },
-    {
-      "username": "simon",
-      "review": "bad",
-      "recipeId": null,
-      "id": 11
-    },
-    {
-      "username": "simon",
-      "review": "bad",
-      "recipeId": null,
-      "id": 12
+      "review": "bad ;(",
+      "recipeId": 1,
+      "id": 5
     }
   ]
 }
