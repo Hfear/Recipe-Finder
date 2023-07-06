@@ -1,4 +1,4 @@
-import { Link, useLoaderData, Form, useFetcher } from "react-router-dom";
+import { Link, useLoaderData, Form, useFetcher, Outlet } from "react-router-dom";
 import { FaPenAlt, FaRegTrashAlt} from "react-icons/fa";
 
 // import{categorybyId} from "../utils"
@@ -22,7 +22,18 @@ export async function action({ request, params }) {
     return { ok: true };
   }
 
+//   const response = await fetch('http://127.0.0.1:3000/reviews', {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(recipeData),
   
+//       });
+//       console.log(response)
+// return redirect('/home');
+
+
 }
 
 export default function Recipe(){
@@ -85,6 +96,12 @@ className="gap-2 p-2 m-1">
 <h5 className = "r-category">{category}</h5>
 <h4>{ingredients}</h4>
 <h2> {description}</h2>
+
+{/* <Link to  = {`/recipes/recipeId=${id}/addReview`}>
+<button>+ Review</button>
+</Link> */}
+
+<Outlet/>
 
 <div> {mappedReviews}</div>
   </>

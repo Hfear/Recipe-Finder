@@ -14,6 +14,7 @@ import Recipe, {loader as recipeDetailLoader, action as deleteReviewAction} from
 import RecipeList, { loader as recipesLoader}  from './RecipeList.jsx';
 import AddForm, {action as addFormAction } from './AddForm.jsx';
 import EditRecipe, {loader as editrecipeloader, action as editAction} from './routes/editRecipe.jsx';
+import AddReview, {action as addreviewAction} from './routes/addReview.jsx';
 
 
 
@@ -66,7 +67,13 @@ const router = createBrowserRouter([
         loader: editrecipeloader,
         action : editAction
     
-      },
+      }, 
+      {
+            path:"recipes/:recipeId/addReview",
+            element: <AddReview/>,
+            action :addreviewAction,
+            
+      }
       // {
       //   path: "reviews/:reviewId/destroy",
       //   action : destroyReviewAction,
