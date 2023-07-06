@@ -27,7 +27,7 @@ export default function RecipeCard({recipe, updateCurRecipe})
     return (
 
         <div className = "r-card" onClick = {handleClick}>
-           
+            <Link to = {`/recipes/${id}`}>
 
             {/* <img className = "r-img" src = {src} alt = {alt} /> */}
             {image ? <img className = "r-img" src={image.src} alt={image.alt} /> : <img className = "r-img" src="https://placehold.co/100x100" alt="No company logo available" />}
@@ -35,9 +35,8 @@ export default function RecipeCard({recipe, updateCurRecipe})
             <h5 className = "r-category">{category}</h5>
 
  
-            <Link to = {`/recipes/${id}`}
-            className="flex items-center gap-2">
-                <BiSolidFoodMenu/>  id = {id}
+           
+                <BiSolidFoodMenu size = {25}/> 
             </Link>
     
 

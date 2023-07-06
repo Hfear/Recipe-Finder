@@ -1,7 +1,7 @@
 // Handles form submission
 
 import { useState, useEffect } from 'react'
-import { Form, redirect } from "react-router-dom";
+import { Form, redirect, Link } from "react-router-dom";
 
 
 
@@ -25,95 +25,59 @@ return redirect('/home');
 
 export default function AddForm({onAddForm}){
 
-// const [recipeForm, setrecipeForm] = useState({
-//     // image: {src : "", alt : ""},
-//     name:"",
-//     category: "",
-//     ingredients: "",
-//     description: "",
-//   })
-
-//   const handleformInput = (e) => {
-//     console.log(e.target.name, e.target.value);
-
-//     //spreading an objects properties
-//       setrecipeForm(recipeForm => {
-//           return{
-//             ...recipeForm,
-//             [e.target.name]: e.target.value
-//           }
-//       });
-//    }
-
-//    //spreading an array of objects
-//    const handleRecipeFormSubmit = async (e) => 
-//    {
-//     e.preventDefault();
-
-//     //resetting recipe form to blank slate
-//     setrecipeForm({
-//       name:"",
-//       category: "",
-//       ingredients: "",
-//       description: "",
-//     })
-
-//     const response = await fetch("http://127.0.0.1:3000/recipes", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(recipeForm),
-  
-//       });
-      
-//       console.log('response', response);
-//       const savedForm = await response.json();
-//       console.log('saved form', savedForm); 
-
-//       onAddForm(savedForm);
-//     }
 
     return(
 <>
+<div
+className='border-2 rounded flex flex-col m-5 p-10 bg-white bg-opacity-10 border-opacity-5' >
 
+                <Link to = "/home"
+                className="text-center border-solid border-indigo-200 border-2 px-2 border-opacity-40 font-serif rounded m-1 bg-indigo-300 bg-opacity-40 "> 
+                <button
+               // onClick = {hideModal}
+               >Close tab</button></Link>
         <Form
         method = "post"
         // onSubmit={handleRecipeFormSubmit}
         >
       
         <fieldset className="flex flex-col">
-                  <label htmlFor="title">Recipe Title</label>
+                  <label htmlFor="title"
+                  className='border-4 border-solid border-pink-800 p-1 bg-opacity-50 bg-pink-700'>
+                    Recipe Title</label>
                   <input
                     // onChange={handleformInput}
                     // value={recipeForm.name}
                     type="text"
                     name="name"
                     id="name"
-                    className="bg-pink-50 border-4 focus:outline-none p-2"
+                    className="bg-opacity-50 bg-pink-50 border-4 focus:outline-none p-2"
                   />
         </fieldset>
-        <fieldset className="flex flex-col">
-                  <label htmlFor="title">Category</label>
+        <fieldset className="bg-opacity-50 flex flex-col">
+                  <label htmlFor="title"
+                  className='border-4 border-solid border-pink-900 p-1 bg-opacity-50 bg-pink-900'>
+                  Category</label>
                   <input
                     // onChange={handleformInput}
                     // value={recipeForm.category}
                     type="text"
                     name="category"
                     id="category"
-                    className="bg-pink-50 bg-white border-4 focus:outline-none p-2"
+                    className="bg-opacity-50 bg-pink-50 bg-white border-4 focus:outline-none p-2"
                   />
         </fieldset>
       
         <fieldset className="flex flex-col">
-                  <label htmlFor="description">Description</label>
+                  <label htmlFor="description"
+                  className='border-4 border-solid border-pink-800 p-1 bg-opacity-50 bg-pink-700'>Description</label>
                   <input
                     // onChange={handleformInput}
                     // value={recipeForm.description}
                     type="text"
                     name="description"
                     id="description"
-                    className="bg-pink-50 bg-white border-4 focus:outline-none p-2"
+                    className="bg-opacity-50 bg-pink-50 bg-white border-4 focus:outline-none p-2"
                   />
         </fieldset>
       
@@ -125,6 +89,7 @@ export default function AddForm({onAddForm}){
       </input>
       
         </Form>
+  </div>
 </>
     )
 

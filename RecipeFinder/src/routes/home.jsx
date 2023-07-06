@@ -101,7 +101,7 @@ const categorys = {
 
   
   
-  <div className='button-filters m-1'> {buttons} </div>
+  {/* <div className='button-filters m-1'> {buttons} </div> */}
   
   <div>
    
