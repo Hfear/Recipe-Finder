@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "home",
+        path: "/",
         element: <Home />,
 
         children: [
@@ -75,6 +75,7 @@ const router = createBrowserRouter([
       }
       // {
       //   path: "reviews/:reviewId/destroy",
+      
       //   action : destroyReviewAction,
       // }
 

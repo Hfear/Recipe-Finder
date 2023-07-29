@@ -105,7 +105,7 @@ const categorys = {
   
   <div>
    
-    <Link to = "/home/recipes/new" 
+    <Link to = "/recipes/new" 
     className='border-solid border-indigo-200 border-2 px-2 border-opacity-25 font-serif rounded m-1'
     //onClick={showModal}
     >

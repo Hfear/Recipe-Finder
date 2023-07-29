@@ -171,6 +171,7 @@ margin-top: 20px;
 
 .r-img{
   height: 250px; 
+  max-width:200;
   box-shadow: 10px 10px 20px rgba(22, 4, 43, 0.352);
 
 
@@ -181,7 +182,10 @@ margin-top: 20px;
 .r-clicked-img{
   min-height: 300px; 
   max-height:  500px;
+  max-width:max-content;
   box-shadow: 10px 10px 20px rgba(22, 4, 43, 0.352);
+
+
   
 
   margin: 3px;

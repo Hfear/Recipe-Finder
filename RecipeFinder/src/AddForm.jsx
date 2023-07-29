@@ -19,7 +19,7 @@ let recipeData = Object.fromEntries(formData);
   
       });
       console.log(response)
-return redirect('/home');
+return redirect('/');
 
 }
 

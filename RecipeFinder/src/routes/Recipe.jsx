@@ -84,32 +84,38 @@ const mappedReviews = reviews.map((review) => {
 
 return (
 <>
-<Link to={"/home"}> {'<'} Back </Link>
+<Link to={"/"}> {'<'} Back </Link>
 
 
 <div
 className="flex flex-col p-20 bg-pink-100 bg-opacity-10 m-10 ">
-  <div className="flex flex-row items-center">
-  <h1>{name}</h1>
-<Link to = {`/recipes/${id}/edit`}
-className="px-2 ">
+
+  <div className="flex flex-col items-center">
+
+ <div className="flex items-center">
+  <h1 className="mr-2">{name}</h1>
+
+<Link to = {`/recipes/${id}/edit`} className="px-2 ">
 <FaPenAlt size={20} />
 </Link>
 </div>
-  
 
-{image ? <img className = "r-clicked-img" src={image.src} alt={image.alt} /> 
+</div>
+  
+<div className="flex flex-col items-center">
+{image ? <img className = "r-clicked-img " src={image.src} alt={image.alt} /> 
 : <img className = "r-clicked-img" src="https://placehold.co/100x100" alt="No company logo available" />}
 
-<h5 className = "r-category">{category}</h5>
+<h5 className = "r-category ">{category}</h5>
 <h4>{ingredients}</h4>
 <h2> {description}</h2>
+</div>
 
 </div>
 
-{/* <Link to  = {`/recipes/recipeId=${id}/addReview`}>
+ <Link to  = {`/recipes/recipeId=${id}/addReview`}>
 <button>+ Review</button>
-</Link> */}
+</Link> 
 
 <Outlet/>
 
